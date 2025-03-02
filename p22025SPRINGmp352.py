@@ -1,57 +1,67 @@
 # Maria Angel Palacios Sarmiento
 # mp352
 # CS 341-002
-# Spring 2025
+# Spring 2024
 
 # Printing Information 
 def header_info():
     print("Project 1 for CS 341")
     print("Section number: 002")
+    print("Semester: Spring 2024")
     print("Written by: Maria Angel Palacios Sarmiento, mp352")
     print("Instructor: Arashdeep Kaur, ak3257@njit.edu")
 
 header_info()
 
-
-class EmailDFA:
+class EmailDFA_mp352:
     def __init__(self):
         self.states = {
             "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"
         }
         self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letters, 'pi' = '.', 'phi' = '@'
         self.transitions = {
-            "q0": {"psi": "q1"},  # Must start with a letter
-            "q1": {"psi": "q1", "pi": "q2", "phi": "q3"},  # Local part (before @)
-            "q2": {"psi": "q1"},  # Allow letters after a dot in local part
-
-            "q3": {"psi": "q4"},  # Domain must start with a letter after '@'
-            "q4": {"psi": "q4", "pi": "q5"},  # Main domain before first '.'
-            "q5": {"psi": "q6"},  # First subdomain after '.'
-            "q6": {"psi": "q6", "pi": "q7"},  # Allow multiple subdomains
-
-            "q7": {"psi": "q8"},  # Last part of domain (gr/go/gov)
-            "q8": {"psi": "q8", "pi": "q9"},  # Allow final dot before gov/gr
-            "q9": {"psi": "q10"},  # Final domain part (gov/gr)
-
-            # 🚀 NEW: Allow more subdomains after reaching .gov/.gr
-            "q10": {"pi": "q7", "psi": "q10"}  # If another dot comes, restart subdomain parsing
+            "q0": {"psi": "q1", "pi": "q_trap", "phi": "q_trap"},
+            "q1": {"psi": "q1", "pi": "q2", "phi": "q3"},
+            "q2": {"psi": "q1"},  
+            "q3": {"psi": "q4"},  
+            "q4": {"psi": "q4", "pi": "q5"},  
+            "q5": {"psi": "q6"},  
+            "q6": {"psi": "q6", "pi": "q7"},  
+            "q7": {"psi": "q8"},  
+            "q8": {"psi": "q8", "pi": "q9"},  # Sigue aceptando letras y puntos
+            "q9": {"psi": "q10", "pi": "q7"},  # Permite más puntos después
+            "q10": {"psi": "q10", "pi": "q9"}  # Asegura que los dominios largos se procesen
+ 
         }
-        self.accepting_states = {"q6","q10"}  # The final domain must be in q10
+        self.accepting_states = {"q6","q10"}
 
     def process_string(self, string):
-        state = "q0"  # Start state
+        state = "q0"  
+        print(f"Starting DFA processing in state: {state}")
+
         for char in string:
             symbol = self.get_symbol(char)
-            if symbol not in self.alphabet or state not in self.transitions or symbol not in self.transitions[state]:
-                return f"Rejected: Invalid transition from {state} on '{char}'"
-            state = self.transitions[state][symbol]
+            
+            if symbol not in self.alphabet:
+                print("Entered string contains invalid input bits")
+                return  
 
-        # Check if email ends in .gov or .gr
-        valid_endings = [".gov", ".gr"]
-        if any(string.endswith(suffix) for suffix in valid_endings):
-            return "Accepted"
+            if state not in self.transitions or symbol not in self.transitions[state]:
+                print(f"String w= \"{string}\" is not acceptable by the given DFA because of an invalid transition from {state} on '{char}'.")
+                return  
+
+            next_state = self.transitions[state][symbol]
+            print(f"Present State: {state}")
+            print(f"Current input symbol: {char}")
+            print(f"Next State: {next_state}\n")
+            state = next_state  
+        print(f"Final State: {state}")  # Verifica en qué estado termina la cadena
+
+
+        if state in self.accepting_states and (string.endswith(".gov") or string.endswith(".gr")):
+            print(f"String w= \"{string}\" is accepted.")
         else:
-            return f"Rejected: Email must end in '.gov' or '.gr'"
+            print(f"String w= \"{string}\" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.")
 
     def get_symbol(self, char):
         if char.islower():
@@ -63,8 +73,15 @@ class EmailDFA:
         else:
             return "invalid"
 
-dfa = EmailDFA()
+dfa = EmailDFA_mp352()
+
+# Input handling
 n = int(input("Enter number of strings: "))
-for _ in range(n):
-    email = input("Enter email string: ")
-    print(dfa.process_string(email))
+print(f"Number of strings to be processed: {n}")
+
+if n == 0:
+    print("No input to process. Terminating program.")
+else:
+    for i in range(1, n + 1):
+        email = input(f"Enter string {i} of {n}: ")
+        dfa.process_string(email)
