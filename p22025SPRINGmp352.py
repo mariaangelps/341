@@ -43,19 +43,19 @@ class EmailDFA_352:
         #for loop that iterates through each char of the string entered from the user
         for char in string:
             #by using get method, we convert each char to symbol so the Machine can identify wisely
-            symbol = self.get_symbol_352(char)
+            sym = self.get_symbol_352(char)
             
             #if not in alphabet-> error message
-            if symbol not in self.alphabet:
+            if sym not in self.alphabet:
                 print("Entered string contains invalid input bits")
                 return  
 
             #if no transition for the state-> error
-            if state not in self.transitions or symbol not in self.transitions[state]:
+            if state not in self.transitions or sym not in self.transitions[state]:
                 print(f"String w= \"{string}\" is not acceptable by the given DFA because of an invalid transition from {state} on '{char}'.")
                 return  
             #assign next state and update each transitions
-            next_state = self.transitions[state][symbol]
+            next_state = self.transitions[state][sym]
             print(f"Present State: {state}")
             print(f"Current input symbol: {char}")
             print(f"Next State: {next_state}\n")
