@@ -15,7 +15,7 @@ header_info()
 class EmailDFA:
     def __init__(self):
         self.states = {
-            "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"
+            "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"
         }
         self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letras, 'pi' = '.', 'phi' = '@'
         self.transitions = {
@@ -27,9 +27,14 @@ class EmailDFA:
             "q5": {"psi": "q6"},  # Subdominio después del primer '.'
             "q6": {"psi": "q6", "pi": "q7"},  # Permite más subdominios
             "q7": {"psi": "q8"},  # Última parte del dominio después del último '.'
-            "q8": {"psi": "q8", "pi": "q6"}  # 🔥 Permitir más subdominios después de un '.'
-        }
-        self.accepting_states = {"q6", "q8"}  # 🔥 Ahora q6 también es válido
+            "q8": {"psi": "q8"}  # Solo letras después del último punto
+}
+        self.accepting_states = {"q6"} 
+
+
+
+
+
 
     def process_string(self, string):
         state = "q0"  # Estado inicial
