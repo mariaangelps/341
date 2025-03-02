@@ -14,26 +14,20 @@ header_info()
 
 class EmailDFA:
     def __init__(self):
-        self.states = {"q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9","q10"}
+        self.states = {"q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"}
         self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letters a-z, 'pi' = '.', 'phi' = '@'
         self.transitions = {
-            "q0": {"psi": "q1", "pi": "q7"},
-            "q1": {"psi": "q1", "phi": "q4","pi": "q2"},
-            "q2": {"phi": "q3"},
-            "q3": {"psi": "q3", "pi": "q5"},
-            "q4": {"psi": "q5", "pi":"q10"},
-            #revisar esto
-            "q5": {"psi": "q5", "pi": "q5", "psi": "q6"},
-            "q6": {},  # Único estado de aceptación
-            "q7": {"pi": "q7", "psi": "q9", "phi":"q8", "psi":"q8"},
-            "q8": {"psi": "q8", "psi": "q9", "psi": "q9"},
-            "q9": {"psi": "q9"},
-            "q10": {"psi": "q9"}
+            "q0": {"psi": "q1"},  # El email debe comenzar con una letra
+            "q1": {"psi": "q1", "phi": "q2", "pi": "q7"},  # Usuario antes de @
+            "q2": {"psi": "q3"},  # Debe haber al menos una letra después del @
+            "q3": {"psi": "q3", "pi": "q4"},  # Dominio antes del punto
+            "q4": {"psi": "q5"},  # Debe haber letras después del punto
+            "q5": {"psi": "q5"},  # Dominio válido
         }
-        self.accepting_states = {"q6"}  # Solo q6 es final
+        self.accepting_states = {"q5"}  # Solo q5 es final
 
     def process_string(self, string):
-        state = "start"
+        state = "q0"  # Estado inicial corregido
         for char in string:
             symbol = self.get_symbol(char)
             if symbol not in self.alphabet or state not in self.transitions or symbol not in self.transitions[state]:
@@ -50,7 +44,6 @@ class EmailDFA:
             return "phi"
         else:
             return "invalid"
-
 
 dfa = EmailDFA()
 n = int(input("Enter number of strings: "))
