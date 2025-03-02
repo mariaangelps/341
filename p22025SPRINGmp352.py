@@ -4,16 +4,16 @@
 # Spring 2024
 
 # Printing Information 
-def header_info():
+def header_info_352():
     print("Project 1 for CS 341")
     print("Section number: 002")
     print("Semester: Spring 2024")
     print("Written by: Maria Angel Palacios Sarmiento, mp352")
     print("Instructor: Arashdeep Kaur, ak3257@njit.edu")
 
-header_info()
+header_info_352()
 
-class EmailDFA_mp352:
+class EmailDFA_352:
     def __init__(self):
         self.states = {
             "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"
@@ -35,12 +35,12 @@ class EmailDFA_mp352:
         }
         self.accepting_states = {"q6","q10"}
 
-    def process_string(self, string):
+    def process_string_352(self, string):
         state = "q0"  
         print(f"Starting DFA processing in state: {state}")
 
         for char in string:
-            symbol = self.get_symbol(char)
+            symbol = self.get_symbol_352(char)
             
             if symbol not in self.alphabet:
                 print("Entered string contains invalid input bits")
@@ -63,7 +63,7 @@ class EmailDFA_mp352:
         else:
             print(f"String w= \"{string}\" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.")
 
-    def get_symbol(self, char):
+    def get_symbol_352(self, char):
         if char.islower():
             return "psi"
         elif char == ".":
@@ -73,15 +73,15 @@ class EmailDFA_mp352:
         else:
             return "invalid"
 
-dfa = EmailDFA_mp352()
+dfa = EmailDFA_352()
 
 # Input handling
-n = int(input("Enter number of strings: "))
+n = int(input("Enter number of strings, they have to be greater than 0: "))
 print(f"Number of strings to be processed: {n}")
 
 if n == 0:
-    print("No input to process. Terminating program.")
+    print("No input to process. Try a valid number")
 else:
     for i in range(1, n + 1):
         email = input(f"Enter string {i} of {n}: ")
-        dfa.process_string(email)
+        dfa.process_string_352(email)

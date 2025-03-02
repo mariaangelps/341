@@ -1,0 +1,991 @@
+Present State: q1
+Current input symbol: p
+Next State: q1
+
+Present State: q1
+Current input symbol: q
+Next State: q1
+
+Present State: q1
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+String w= "opqr@.gov" is not acceptable by the given DFA because of an invalid transition from q3 on '.'.
+Enter string 5 of 20: web.rstuv.b.gov.cdef@z.gr.go.stanford.gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: b
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+Present State: q2
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: s
+Next State: q1
+
+Present State: q1
+Current input symbol: t
+Next State: q1
+
+Present State: q1
+Current input symbol: u
+Next State: q1
+
+Present State: q1
+Current input symbol: v
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+Present State: q2
+Current input symbol: b
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+Present State: q2
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: v
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+Present State: q2
+Current input symbol: c
+Next State: q1
+
+Present State: q1
+Current input symbol: d
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: f
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: z
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: r
+Next State: q6
+
+Present State: q6
+Current input symbol: .
+Next State: q7
+
+Present State: q7
+Current input symbol: g
+Next State: q8
+
+Present State: q8
+Current input symbol: o
+Next State: q8
+
+Present State: q8
+Current input symbol: .
+Next State: q9
+
+Present State: q9
+Current input symbol: s
+Next State: q10
+
+Present State: q10
+Current input symbol: t
+Next State: q10
+
+Present State: q10
+Current input symbol: a
+Next State: q10
+
+Present State: q10
+Current input symbol: n
+Next State: q10
+
+Present State: q10
+Current input symbol: f
+Next State: q10
+
+Present State: q10
+Current input symbol: o
+Next State: q10
+
+Present State: q10
+Current input symbol: r
+Next State: q10
+
+Present State: q10
+Current input symbol: d
+Next State: q10
+
+Present State: q10
+Current input symbol: .
+Next State: q9
+
+Present State: q9
+Current input symbol: g
+Next State: q10
+
+Present State: q10
+Current input symbol: o
+Next State: q10
+
+Present State: q10
+Current input symbol: v
+Next State: q10
+
+Final State: q10
+String w= "web.rstuv.b.gov.cdef@z.gr.go.stanford.gov" is accepted.
+Enter string 6 of 20: gg@ggg.gov..gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: o
+Next State: q6
+
+Present State: q6
+Current input symbol: v
+Next State: q6
+
+Present State: q6
+Current input symbol: .
+Next State: q7
+
+String w= "gg@ggg.gov..gov" is not acceptable by the given DFA because of an invalid transition from q7 on '.'.
+Enter string 7 of 20: zyxw.@phone.gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: z
+Next State: q1
+
+Present State: q1
+Current input symbol: y
+Next State: q1
+
+Present State: q1
+Current input symbol: x
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+String w= "zyxw.@phone.gov" is not acceptable by the given DFA because of an invalid transition from q2 on '@'.
+Enter string 8 of 20: gov@govern.gov.
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: v
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: o
+Next State: q4
+
+Present State: q4
+Current input symbol: v
+Next State: q4
+
+Present State: q4
+Current input symbol: e
+Next State: q4
+
+Present State: q4
+Current input symbol: r
+Next State: q4
+
+Present State: q4
+Current input symbol: n
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: o
+Next State: q6
+
+Present State: q6
+Current input symbol: v
+Next State: q6
+
+Present State: q6
+Current input symbol: .
+Next State: q7
+
+Final State: q7
+String w= "gov@govern.gov." is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.
+Enter string 9 of 20: yellow@abc.gov.green
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: y
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: l
+Next State: q1
+
+Present State: q1
+Current input symbol: l
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: a
+Next State: q4
+
+Present State: q4
+Current input symbol: b
+Next State: q4
+
+Present State: q4
+Current input symbol: c
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: o
+Next State: q6
+
+Present State: q6
+Current input symbol: v
+Next State: q6
+
+Present State: q6
+Current input symbol: .
+Next State: q7
+
+Present State: q7
+Current input symbol: g
+Next State: q8
+
+Present State: q8
+Current input symbol: r
+Next State: q8
+
+Present State: q8
+Current input symbol: e
+Next State: q8
+
+Present State: q8
+Current input symbol: e
+Next State: q8
+
+Present State: q8
+Current input symbol: n
+Next State: q8
+
+Final State: q8
+String w= "yellow@abc.gov.green" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.
+Enter string 10 of 20: random@gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: a
+Next State: q1
+
+Present State: q1
+Current input symbol: n
+Next State: q1
+
+Present State: q1
+Current input symbol: d
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: m
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: o
+Next State: q4
+
+Present State: q4
+Current input symbol: v
+Next State: q4
+
+Final State: q4
+String w= "random@gov" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.
+Enter string 11 of 20: rewq@g.gov.gr.gor
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: q
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: o
+Next State: q6
+
+Present State: q6
+Current input symbol: v
+Next State: q6
+
+Present State: q6
+Current input symbol: .
+Next State: q7
+
+Present State: q7
+Current input symbol: g
+Next State: q8
+
+Present State: q8
+Current input symbol: r
+Next State: q8
+
+Present State: q8
+Current input symbol: .
+Next State: q9
+
+Present State: q9
+Current input symbol: g
+Next State: q10
+
+Present State: q10
+Current input symbol: o
+Next State: q10
+
+Present State: q10
+Current input symbol: r
+Next State: q10
+
+Final State: q10
+String w= "rewq@g.gov.gr.gor" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.
+Enter string 12 of 20: www@gov.govr
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: o
+Next State: q4
+
+Present State: q4
+Current input symbol: v
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: o
+Next State: q6
+
+Present State: q6
+Current input symbol: v
+Next State: q6
+
+Present State: q6
+Current input symbol: r
+Next State: q6
+
+Final State: q6
+String w= "www@gov.govr" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.
+Enter string 13 of 20: wwwc@gov.gr
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: c
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: o
+Next State: q4
+
+Present State: q4
+Current input symbol: v
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: r
+Next State: q6
+
+Final State: q6
+String w= "wwwc@gov.gr" is accepted.
+Enter string 14 of 20: .five@six.gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: .
+Next State: q_trap
+
+String w= ".five@six.gov" is not acceptable by the given DFA because of an invalid transition from q_trap on 'f'.
+Enter string 15 of 20: governess@go.gov@
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: v
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: n
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: s
+Next State: q1
+
+Present State: q1
+Current input symbol: s
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: o
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: o
+Next State: q6
+
+Present State: q6
+Current input symbol: v
+Next State: q6
+
+String w= "governess@go.gov@" is not acceptable by the given DFA because of an invalid transition from q6 on '@'.
+Enter string 16 of 20: govern@government.gr.govt
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: v
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: n
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: o
+Next State: q4
+
+Present State: q4
+Current input symbol: v
+Next State: q4
+
+Present State: q4
+Current input symbol: e
+Next State: q4
+
+Present State: q4
+Current input symbol: r
+Next State: q4
+
+Present State: q4
+Current input symbol: n
+Next State: q4
+
+Present State: q4
+Current input symbol: m
+Next State: q4
+
+Present State: q4
+Current input symbol: e
+Next State: q4
+
+Present State: q4
+Current input symbol: n
+Next State: q4
+
+Present State: q4
+Current input symbol: t
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: r
+Next State: q6
+
+Present State: q6
+Current input symbol: .
+Next State: q7
+
+Present State: q7
+Current input symbol: g
+Next State: q8
+
+Present State: q8
+Current input symbol: o
+Next State: q8
+
+Present State: q8
+Current input symbol: v
+Next State: q8
+
+Present State: q8
+Current input symbol: t
+Next State: q8
+
+Final State: q8
+String w= "govern@government.gr.govt" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.
+Enter string 17 of 20: govern@government.gov.gr
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: v
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: n
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+Present State: q3
+Current input symbol: g
+Next State: q4
+
+Present State: q4
+Current input symbol: o
+Next State: q4
+
+Present State: q4
+Current input symbol: v
+Next State: q4
+
+Present State: q4
+Current input symbol: e
+Next State: q4
+
+Present State: q4
+Current input symbol: r
+Next State: q4
+
+Present State: q4
+Current input symbol: n
+Next State: q4
+
+Present State: q4
+Current input symbol: m
+Next State: q4
+
+Present State: q4
+Current input symbol: e
+Next State: q4
+
+Present State: q4
+Current input symbol: n
+Next State: q4
+
+Present State: q4
+Current input symbol: t
+Next State: q4
+
+Present State: q4
+Current input symbol: .
+Next State: q5
+
+Present State: q5
+Current input symbol: g
+Next State: q6
+
+Present State: q6
+Current input symbol: o
+Next State: q6
+
+Present State: q6
+Current input symbol: v
+Next State: q6
+
+Present State: q6
+Current input symbol: .
+Next State: q7
+
+Present State: q7
+Current input symbol: g
+Next State: q8
+
+Present State: q8
+Current input symbol: r
+Next State: q8
+
+Final State: q8
+String w= "govern@government.gov.gr" is not acceptable by the given DFA because it does not end in '.gov' or '.gr'.
+Enter string 18 of 20: @mnop.gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: @
+Next State: q_trap
+
+String w= "@mnop.gov" is not acceptable by the given DFA because of an invalid transition from q_trap on 'm'.
+Enter string 19 of 20: xyzz.bcde.grow@.gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: x
+Next State: q1
+
+Present State: q1
+Current input symbol: y
+Next State: q1
+
+Present State: q1
+Current input symbol: z
+Next State: q1
+
+Present State: q1
+Current input symbol: z
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+Present State: q2
+Current input symbol: b
+Next State: q1
+
+Present State: q1
+Current input symbol: c
+Next State: q1
+
+Present State: q1
+Current input symbol: d
+Next State: q1
+
+Present State: q1
+Current input symbol: e
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+Present State: q2
+Current input symbol: g
+Next State: q1
+
+Present State: q1
+Current input symbol: r
+Next State: q1
+
+Present State: q1
+Current input symbol: o
+Next State: q1
+
+Present State: q1
+Current input symbol: w
+Next State: q1
+
+Present State: q1
+Current input symbol: @
+Next State: q3
+
+String w= "xyzz.bcde.grow@.gov" is not acceptable by the given DFA because of an invalid transition from q3 on '.'.
+Enter string 20 of 20: abcd..efg@fort.gov
+Starting DFA processing in state: q0
+Present State: q0
+Current input symbol: a
+Next State: q1
+
+Present State: q1
+Current input symbol: b
+Next State: q1
+
+Present State: q1
+Current input symbol: c
+Next State: q1
+
+Present State: q1
+Current input symbol: d
+Next State: q1
+
+Present State: q1
+Current input symbol: .
+Next State: q2
+
+String w= "abcd..efg@fort.gov" is not acceptable by the given DFA because of an invalid transition from q2 on '.'.
+(base) macbookpro@MacBookriaAngel 341 % 
