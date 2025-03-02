@@ -15,7 +15,7 @@ header_info()
 class EmailDFA:
     def __init__(self):
         self.states = {
-            "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"
+            "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"
         }
         self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letras, 'pi' = '.', 'phi' = '@'
         self.transitions = {
@@ -27,14 +27,9 @@ class EmailDFA:
             "q5": {"psi": "q6"},  # Subdominio después del primer '.'
             "q6": {"psi": "q6", "pi": "q7"},  # Permite más subdominios
             "q7": {"psi": "q8"},  # Última parte del dominio después del último '.'
-            "q8": {"psi": "q8"}  # Solo letras después del último punto
-}
-        self.accepting_states = {"q6"} 
-
-
-
-
-
+            "q8": {"psi": "q8"},  # Permite continuar con letras en el dominio final
+        }
+        self.accepting_states = {"q7", "q8"}  # Ahora q7 y q8 son estados de aceptación
 
     def process_string(self, string):
         state = "q0"  # Estado inicial
@@ -43,7 +38,12 @@ class EmailDFA:
             if symbol not in self.alphabet or state not in self.transitions or symbol not in self.transitions[state]:
                 return f"Rejected: Invalid transition from {state} on '{char}'"
             state = self.transitions[state][symbol]
-        return "Accepted" if state in self.accepting_states else f"Rejected: Did not reach accepting state (Ended at {state})"
+
+        # Verificación final para asegurar que termine en .gov o .gr
+        if string.endswith(".gov") or string.endswith(".gr"):
+            return "Accepted"
+        else:
+            return f"Rejected: Email must end in '.gov' or '.gr'"
 
     def get_symbol(self, char):
         if char.islower():
