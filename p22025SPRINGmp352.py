@@ -14,20 +14,25 @@ header_info()
 
 class EmailDFA:
     def __init__(self):
-        self.states = {"q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"}
-        self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letters a-z, 'pi' = '.', 'phi' = '@'
-        self.transitions = {
-            "q0": {"psi": "q1"},  # El email debe comenzar con una letra
-            "q1": {"psi": "q1", "phi": "q2", "pi": "q7"},  # Usuario antes de @
-            "q2": {"psi": "q3"},  # Debe haber al menos una letra después del @
-            "q3": {"psi": "q3", "pi": "q4"},  # Dominio antes del punto
-            "q4": {"psi": "q5"},  # Debe haber letras después del punto
-            "q5": {"psi": "q5"},  # Dominio válido
+        self.states = {
+            "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"
         }
-        self.accepting_states = {"q5"}  # Solo q5 es final
+        self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letras, 'pi' = '.', 'phi' = '@'
+        self.transitions = {
+            "q0": {"psi": "q1"},  # Debe comenzar con una letra
+            "q1": {"psi": "q1", "pi": "q2", "phi": "q3"},  # Local part (usuario)
+            "q2": {"psi": "q1"},  # Permite letras después de un punto en usuario
+            "q3": {"psi": "q4"},  # Dominio debe comenzar con una letra después del '@'
+            "q4": {"psi": "q4", "pi": "q5"},  # Dominio principal antes del primer '.'
+            "q5": {"psi": "q6"},  # Subdominio después del primer '.'
+            "q6": {"psi": "q6", "pi": "q7"},  # Permite más subdominios
+            "q7": {"psi": "q8"},  # Última parte del dominio después del último '.'
+            "q8": {"psi": "q8", "pi": "q6"}  # 🔥 Permitir más subdominios después de un '.'
+        }
+        self.accepting_states = {"q6", "q8"}  # 🔥 Ahora q6 también es válido
 
     def process_string(self, string):
-        state = "q0"  # Estado inicial corregido
+        state = "q0"  # Estado inicial
         for char in string:
             symbol = self.get_symbol(char)
             if symbol not in self.alphabet or state not in self.transitions or symbol not in self.transitions[state]:
