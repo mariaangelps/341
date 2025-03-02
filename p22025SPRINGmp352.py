@@ -1,3 +1,18 @@
+# Maria Angel Palacios Sarmiento
+# mp352
+# CS 341-002
+# Spring 2025
+
+# Printing Information 
+def header_info():
+    print("Project 1 for CS 341")
+    print("Section number: 002")
+    print("Written by: Maria Angel Palacios Sarmiento, mp352")
+    print("Instructor: Arashdeep Kaur, ak3257@njit.edu")
+
+header_info()
+
+
 class EmailDFA:
     def __init__(self):
         self.states = {
