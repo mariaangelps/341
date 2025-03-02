@@ -21,7 +21,7 @@ class EmailDFA:
             # 🚀 NEW: Allow more subdomains after reaching .gov/.gr
             "q10": {"pi": "q7", "psi": "q10"}  # If another dot comes, restart subdomain parsing
         }
-        self.accepting_states = {"q10"}  # The final domain must be in q10
+        self.accepting_states = {"q6","q10"}  # The final domain must be in q10
 
     def process_string(self, string):
         state = "q0"  # Start state
