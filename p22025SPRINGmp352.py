@@ -1,46 +1,39 @@
-# Maria Angel Palacios Sarmiento
-# mp352
-# CS 341-002
-# Spring 2025
-
-# Printing Information 
-def header_info():
-    print("Project 1 for CS 341")
-    print("Section number: 002")
-    print("Written by: Maria Angel Palacios Sarmiento, mp352")
-    print("Instructor: Arashdeep Kaur, ak3257@njit.edu")
-
-header_info()
-
 class EmailDFA:
     def __init__(self):
         self.states = {
-            "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"
+            "q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"
         }
-        self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letras, 'pi' = '.', 'phi' = '@'
+        self.alphabet = {"psi", "pi", "phi"}  # 'psi' = letters, 'pi' = '.', 'phi' = '@'
         self.transitions = {
-            "q0": {"psi": "q1"},  # Debe comenzar con una letra
-            "q1": {"psi": "q1", "pi": "q2", "phi": "q3"},  # Local part (usuario)
-            "q2": {"psi": "q1"},  # Permite letras después de un punto en usuario
-            "q3": {"psi": "q4"},  # Dominio debe comenzar con una letra después del '@'
-            "q4": {"psi": "q4", "pi": "q5"},  # Dominio principal antes del primer '.'
-            "q5": {"psi": "q6"},  # Subdominio después del primer '.'
-            "q6": {"psi": "q6", "pi": "q7"},  # Permite más subdominios
-            "q7": {"psi": "q8"},  # Última parte del dominio después del último '.'
-            "q8": {"psi": "q8"},  # Permite continuar con letras en el dominio final
+            "q0": {"psi": "q1"},  # Must start with a letter
+            "q1": {"psi": "q1", "pi": "q2", "phi": "q3"},  # Local part (before @)
+            "q2": {"psi": "q1"},  # Allow letters after a dot in local part
+
+            "q3": {"psi": "q4"},  # Domain must start with a letter after '@'
+            "q4": {"psi": "q4", "pi": "q5"},  # Main domain before first '.'
+            "q5": {"psi": "q6"},  # First subdomain after '.'
+            "q6": {"psi": "q6", "pi": "q7"},  # Allow multiple subdomains
+
+            "q7": {"psi": "q8"},  # Last part of domain (gr/go/gov)
+            "q8": {"psi": "q8", "pi": "q9"},  # Allow final dot before gov/gr
+            "q9": {"psi": "q10"},  # Final domain part (gov/gr)
+
+            # 🚀 NEW: Allow more subdomains after reaching .gov/.gr
+            "q10": {"pi": "q7", "psi": "q10"}  # If another dot comes, restart subdomain parsing
         }
-        self.accepting_states = {"q7", "q8"}  # Ahora q7 y q8 son estados de aceptación
+        self.accepting_states = {"q10"}  # The final domain must be in q10
 
     def process_string(self, string):
-        state = "q0"  # Estado inicial
+        state = "q0"  # Start state
         for char in string:
             symbol = self.get_symbol(char)
             if symbol not in self.alphabet or state not in self.transitions or symbol not in self.transitions[state]:
                 return f"Rejected: Invalid transition from {state} on '{char}'"
             state = self.transitions[state][symbol]
 
-        # Verificación final para asegurar que termine en .gov o .gr
-        if string.endswith(".gov") or string.endswith(".gr"):
+        # Check if email ends in .gov or .gr
+        valid_endings = [".gov", ".gr"]
+        if any(string.endswith(suffix) for suffix in valid_endings):
             return "Accepted"
         else:
             return f"Rejected: Email must end in '.gov' or '.gr'"
