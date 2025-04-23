@@ -6,10 +6,10 @@
 
 import re
 
-terminal_symbols = set("0123456789.+-*/(,)ab")
+terminal_symbols = set("0123456789.+-*/()ab")
 
-# PDA transitions states
-class PDA:
+# PDA class with transitions and processing
+class PDA_mp352:
     def __init__(self):
         self.stack = []
         self.state = 'q0'
@@ -19,8 +19,7 @@ class PDA:
         self.stack = ['Zo']
         self.state = 'q0'
 
-
-    # Is valid symbol 
+    # Is valid symbol (only checks if all symbols are in the terminal set)
     def is_valid_symbol(self, string):
         return all(char in terminal_symbols for char in string)
 
@@ -28,8 +27,9 @@ class PDA:
         self.reset()
         print(f"Start state: {self.state}")
         index = 0
+        error_occurred = False
 
-        #goes through each char in input
+        # goes through each char in input
         while index < len(input_s):
             current_char = input_s[index]
             stack_top = self.stack[-1] if self.stack else "epsilon"
@@ -46,7 +46,7 @@ class PDA:
                 self.state = 'q0'
                 print("Next state: q0")
 
-            # Transition into middle expression (assumed)
+            # Transition into middle expression (b section)
             elif self.state == 'q0' and current_char == 'b':
                 if self.stack[-1] == 'a':
                     self.stack.pop()
@@ -56,31 +56,41 @@ class PDA:
                     self.state = 'q1'
                     print("Next state: q1")
                 else:
-                    return self.reject(input_s, "Mismatch in 'a^k b^k' pattern")
+                    error_occurred = True
+                    print(f"No valid transition from state {self.state} on input '{current_char}'")
 
-            elif self.state == 'q1':
-                # Continue processing midsection (arithmetic expression parser should go here)
-                # For now, accept it as a placeholder
-                print("Processing arithmetic section...")
-                self.state = 'q2'
-                print("Next state: q2")
-                break
+            # Process the arithmetic section (state q1)
+            elif self.state == 'q1' and current_char in "0123456789.+-*/()":
+                print(f"Processing arithmetic section: {current_char}")
+                self.state = 'q1'  # Stay in q1 as we're processing the middle part
+                print("Next state: q1")
+                
+            # Transition to final state after arithmetic processing
+            elif self.state == 'q1' and current_char == 'a':
+                if self.stack[-1] == 'b':
+                    self.stack.pop()
+                    print("Symbol popped from Stack: b")
+                    print("Symbols pushed onto Stack: a")
+                    self.stack.append('a')
+                    self.state = 'q2'
+                    print("Next state: q2")
+                else:
+                    error_occurred = True
+                    print(f"No valid transition from state {self.state} on input '{current_char}'")
 
+            # Reject if no valid transition is found
             else:
-                return self.reject(input_s, f"No valid transition from state {self.state} on input '{current_char}'")
+                error_occurred = True
+                print(f"No valid transition from state {self.state} on input '{current_char}'")
 
             index += 1
 
-        # Simplified final check
-        if self.state == 'q2':
+        # Final check for accepting state
+        if not error_occurred and self.state == 'q2' and not self.stack:
             print(f"\nString w = \"{input_s}\" is accepted by the given PDA.")
         else:
-            return self.reject(input, "Did not reach accepting/final state")
-
-    def reject(self, input, reason):
-        print(f"\nString w = \"{input}\" is not acceptable by the given PDA because {reason}.")
-        return False
-
+            print(f"\nString w = \"{input_s}\" is not acceptable by the given PDA.")
+            return False
 
 def main():
     print("Project 2 for CS 341")
@@ -89,7 +99,7 @@ def main():
     print("Written by: Maria Angel Palacios Sarmiento, mp352")
     print("Instructor: Arashdeep Kaur, ak3257@njit.edu\n")
 
-    pda = PDA()
+    pda = PDA_mp352()
 
     try:
         n = int(input("Enter number of input strings to process (n >= 0): "))
@@ -101,7 +111,7 @@ def main():
     if n == 0:
         return
 
-    #for loop iterating for each number of n nunber entered 
+    # Loop to process each input string
     for i in range(1, n + 1):
         input_s = input(f"\nEnter string {i} of {n}: ")
         if not pda.is_valid_symbol(input_s):
@@ -109,7 +119,6 @@ def main():
         else:
             print(f"Input string: {input_s}")
             pda.run(input_s)
-
 
 if __name__ == "__main__":
     main()
