@@ -1,14 +1,14 @@
 # Project 2 for CS 341
-# Section number: [Enter your section]
+# Section number: 002
 # Semester: SPRING 2025
-# Written by: [Your First and Last Name], [Your NJIT UCID]
+# Written by: Maria Angel Palacios Sarmiento, mp352
 # Instructor: Arashdeep Kaur, ak3257@njit.edu
 
 import re
 
-VALID_SYMBOLS = set("0123456789.+-*/()ab")
+terminal_symbols = set("0123456789.+-*/(,)ab")
 
-# Define PDA transition simulation
+# PDA transitions states
 class PDA:
     def __init__(self):
         self.stack = []
@@ -16,21 +16,23 @@ class PDA:
         self.accept_state = 'q_accept'
 
     def reset(self):
-        self.stack = ['Z']
+        self.stack = ['Zo']
         self.state = 'q0'
 
-    def is_valid_symbol(self, string):
-        return all(char in VALID_SYMBOLS for char in string)
 
-    def run(self, input_string):
+    # Is valid symbol 
+    def is_valid_symbol(self, string):
+        return all(char in terminal_symbols for char in string)
+
+    def run(self, input_s):
         self.reset()
-        print(f"Starting state: {self.state}")
+        print(f"Start state: {self.state}")
         index = 0
 
-        # Simulate PDA transitions
-        while index < len(input_string):
-            current_char = input_string[index]
-            stack_top = self.stack[-1] if self.stack else "ε"
+        #goes through each char in input
+        while index < len(input_s):
+            current_char = input_s[index]
+            stack_top = self.stack[-1] if self.stack else "epsilon"
 
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {current_char}")
@@ -39,7 +41,7 @@ class PDA:
             # Handle 'a^k'
             if self.state == 'q0' and current_char == 'a':
                 self.stack.append('a')
-                print("Symbol popped from Stack: ε")
+                print("Symbol popped from Stack: Epsilon")
                 print("Symbols pushed onto Stack: a")
                 self.state = 'q0'
                 print("Next state: q0")
@@ -54,7 +56,7 @@ class PDA:
                     self.state = 'q1'
                     print("Next state: q1")
                 else:
-                    return self.reject(input_string, "Mismatch in 'a^k b^k' pattern")
+                    return self.reject(input_s, "Mismatch in 'a^k b^k' pattern")
 
             elif self.state == 'q1':
                 # Continue processing midsection (arithmetic expression parser should go here)
@@ -65,26 +67,26 @@ class PDA:
                 break
 
             else:
-                return self.reject(input_string, f"No valid transition from state {self.state} on input '{current_char}'")
+                return self.reject(input_s, f"No valid transition from state {self.state} on input '{current_char}'")
 
             index += 1
 
         # Simplified final check
         if self.state == 'q2':
-            print(f"\nString w = \"{input_string}\" is accepted by the given PDA.")
+            print(f"\nString w = \"{input_s}\" is accepted by the given PDA.")
         else:
-            return self.reject(input_string, "Did not reach accepting state")
+            return self.reject(input, "Did not reach accepting/final state")
 
-    def reject(self, input_string, reason):
-        print(f"\nString w = \"{input_string}\" is not acceptable by the given PDA because {reason}.")
+    def reject(self, input, reason):
+        print(f"\nString w = \"{input}\" is not acceptable by the given PDA because {reason}.")
         return False
 
 
 def main():
     print("Project 2 for CS 341")
-    print("Section number: [Your Section]")
+    print("Section number: 002")
     print("Semester: SPRING 2025")
-    print("Written by: [Your Full Name], [Your UCID]")
+    print("Written by: Maria Angel Palacios Sarmiento, mp352")
     print("Instructor: Arashdeep Kaur, ak3257@njit.edu\n")
 
     pda = PDA()
@@ -99,13 +101,14 @@ def main():
     if n == 0:
         return
 
+    #for loop iterating for each number of n nunber entered 
     for i in range(1, n + 1):
-        input_string = input(f"\nEnter string {i} of {n}: ")
-        if not pda.is_valid_symbol(input_string):
+        input_s = input(f"\nEnter string {i} of {n}: ")
+        if not pda.is_valid_symbol(input_s):
             print("Entered string contains invalid input bits.")
         else:
-            print(f"Input string: {input_string}")
-            pda.run(input_string)
+            print(f"Input string: {input_s}")
+            pda.run(input_s)
 
 
 if __name__ == "__main__":
