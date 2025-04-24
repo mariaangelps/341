@@ -1,0 +1,468 @@
+(base) macbookpro@MacBookriaAngel cs 341 % /usr/local/bin/python3 "/Users/macbookpro/Desktop/CS/cs 341
+/341/project2/lab2.py"
+Project 2 for CS 341
+Section number: 002
+Semester: SPRING 2025
+Written by: Maria Angel Palacios Sarmiento, mp352
+Instructor: Arashdeep Kaur, ak3257@njit.edu
+
+Enter number of input strings to process (n >= 0): 15
+n = 15
+
+Enter string 1 of 15: abbba43.51386abbba
+
+Input string: abbba43.51386abbba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Final state reached: q_accept
+
+String w = "abbba43.51386abbba" is ACCEPTABLE by the given PDA.
+
+Enter string 2 of 15: aa.78+27.-3.013/837.842+aa
+
+Input string: aa.78+27.-3.013/837.842+aa
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aa.78+27.-3.013/837.842+aa" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: .78+27.-3.013/837.842+
+
+Enter string 3 of 15: aa48622.+.411.2/00.1/521.23-.9+.53/7.aa
+
+Input string: aa48622.+.411.2/00.1/521.23-.9+.53/7.aa
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aa48622.+.411.2/00.1/521.23-.9+.53/7.aa" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: 48622.+.411.2/00.1/521.23-.9+.53/7.
+
+Enter string 4 of 15: abba382.8914.2aba
+
+Input string: abba382.8914.2aba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "abba382.8914.2aba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: 382.8914.2
+
+Enter string 5 of 15: aba4.91-.17.9aba
+
+Input string: aba4.91-.17.9aba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aba4.91-.17.9aba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: 4.91-.17.9
+
+Enter string 6 of 15: aa44.88.6+3.208aa
+
+Input string: aa44.88.6+3.208aa
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aa44.88.6+3.208aa" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: 44.88.6+3.208
+
+Enter string 7 of 15: aba(1.2+(3.5-.9)/19).3aba
+
+Input string: aba(1.2+(3.5-.9)/19).3aba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aba(1.2+(3.5-.9)/19).3aba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: (1.2+(3.5-.9)/19).3
+
+Enter string 8 of 15: abba(.4)64abba
+
+Input string: abba(.4)64abba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "abba(.4)64abba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: (.4)64
+
+Enter string 9 of 15: aba((824.23+(9.22-00.0)21.2))+((.2/7.))abba
+
+Input string: aba((824.23+(9.22-00.0)21.2))+((.2/7.))abba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aba((824.23+(9.22-00.0)21.2))+((.2/7.))abba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: ((824.23+(9.22-00.0)21.2))+((.2/7.))
+
+Enter string 10 of 15: aba(())aba
+
+Input string: aba(())aba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aba(())aba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: (())
+
+Enter string 11 of 15: abba((14.252+(692.211(.39+492.1))/49.235)abba
+
+Input string: abba((14.252+(692.211(.39+492.1))/49.235)abba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "abba((14.252+(692.211(.39+492.1))/49.235)abba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: ((14.252+(692.211(.39+492.1))/49.235)
+
+Enter string 12 of 15: abba+6.5abba
+
+Input string: abba+6.5abba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "abba+6.5abba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: +6.5
+
+Enter string 13 of 15: aa26.0(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.8.0)/.33))+.76aa
+
+Input string: aa26.0(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.8.0)/.33))+.76aa
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aa26.0(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.8.0)/.33))+.76aa" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: 26.0(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.8.0)/.33))+.76
+
+Enter string 14 of 15: abba.0(32.922+.7-*9.))abba
+
+Input string: abba.0(32.922+.7-*9.))abba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "abba.0(32.922+.7-*9.))abba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: .0(32.922+.7-*9.))
+
+Enter string 15 of 15: aba(4.+(.8-9.))/2.)*3.4+(5.21/34.2aba
+
+Input string: aba(4.+(.8-9.))/2.)*3.4+(5.21/34.2aba
+PDA reset. Stack and state initialized.
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: b
+Symbol popped from Stack: b
+Stack Top: Zo
+Symbol pushed onto Stack: b
+Next state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Symbol popped from Stack: a
+Stack Top: Zo
+Symbols pushed onto Stack: a
+Next state: q0
+
+String w = "aba(4.+(.8-9.))/2.)*3.4+(5.21/34.2aba" is NOT acceptable by the given PDA because: 
+Invalid arithmetic expression: (4.+(.8-9.))/2.)*3.4+(5.21/34.2
+(base) macbookpro@MacBookriaAngel cs 341 % 
