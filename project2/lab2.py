@@ -1,3 +1,5 @@
+import re
+
 def is_operator(ch):
     return ch in ['+', '-', '*', '/']
 
@@ -6,7 +8,7 @@ def is_digit(ch):
 
 def is_valid_expression(expr):
     allowed = set('0123456789+-*/(). ')
-    
+
     # Check if only allowed characters are present
     if not all(c in allowed for c in expr):
         return False
@@ -15,14 +17,26 @@ def is_valid_expression(expr):
     prev_char = ''
     for char in expr:
         if char in ['+', '-', '*', '/']:
-            if prev_char in ['+', '-', '*', '/'] or prev_char == '':
-                return False  # Consecutive operators or operator at the start
+            if prev_char in ['+', '-', '*', '/'] or prev_char == '' or prev_char == '.' or prev_char == '-':
+                return False  # Consecutive operators, operator at the start, or operator after a dot or negative sign
         prev_char = char
 
     # Check if the expression starts or ends with an operator
     if expr[0] in ['+', '-', '*', '/'] or expr[-1] in ['+', '-', '*', '/']:
         return False
-    
+
+    # Special case: negative sign before dot is invalid (e.g., '-.' is not allowed)
+    if '.-' in expr:
+        return False
+
+    # Regex pattern to ensure valid floating-point numbers
+    # It allows numbers like 123.45, -123.45, (.45), etc.
+    float_pattern = r'^[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?$'
+    for part in expr.split(' '):
+        if part:
+            if not re.match(float_pattern, part):
+                return False
+
     return True
 
 class PDA:
