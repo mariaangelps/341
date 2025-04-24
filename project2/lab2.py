@@ -62,7 +62,7 @@ class PDA:
         if i < n and input_str[i] == 'a':
             self.stack.append('a')
             print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
-            print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
+            print(f"Stack Top: {self.stack[-2] if len(self.stack) > 1 else 'ε'}\nSymbols pushed onto Stack: a\nNext state: q0")
             i += 1
         else:
             return False, "Does not start with 'a'"
@@ -72,16 +72,16 @@ class PDA:
             self.stack.append('b')
             k_count += 1
             print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
-            print(f"Symbol popped from Stack: ε")
-            print(f"Stack Top: {self.stack[-2]}\nSymbol pushed onto Stack: b\nNext state: q0")
+            print(f"Symbol popped from Stack: {self.stack.pop() if self.stack else 'ε'}")
+            print(f"Stack Top: {self.stack[-2] if len(self.stack) > 1 else 'ε'}\nSymbol pushed onto Stack: b\nNext state: q0")
             i += 1
 
         # Step 3: Second 'a'
         if i < n and input_str[i] == 'a':
             self.stack.append('a')
             print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
-            print(f"Symbol popped from Stack: ε")
-            print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
+            print(f"Symbol popped from Stack: {self.stack.pop() if self.stack else 'ε'}")
+            print(f"Stack Top: {self.stack[-2] if len(self.stack) > 1 else 'ε'}\nSymbols pushed onto Stack: a\nNext state: q0")
             i += 1
         else:
             return False, "Missing second 'a' after ab^k"
