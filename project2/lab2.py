@@ -1,12 +1,12 @@
 import re
 
-def is_operator(ch):
+def is_operator_352(ch):
     return ch in ['+', '-', '*', '/']
 
-def is_digit(ch):
+def is_digit_352(ch):
     return ch.isdigit()
 
-def is_valid_expression(expr):
+def is_valid_expression_352(expr):
     allowed = set('0123456789+-*/(). ')
 
     # Check if only allowed characters are present
@@ -45,14 +45,14 @@ class PDA:
         self.state = 'q0'
         self.accepting_state = 'q_accept'
 
-    def reset(self):
+    def reset_352(self):
         self.stack = ['Zo']
         self.state = 'q0'
         print("PDA reset. Stack and state initialized.\nStart state: q0")
 
-    def process(self, input_str):
+    def process_352(self, input_str):
         print(f"\nInput string: {input_str}")
-        self.reset()
+        self.reset_352()
 
         i = 0
         n = len(input_str)
@@ -72,6 +72,7 @@ class PDA:
             self.stack.append('b')
             k_count += 1
             print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
+            print(f"Symbol popped from Stack: ε")
             print(f"Stack Top: {self.stack[-2]}\nSymbol pushed onto Stack: b\nNext state: q0")
             i += 1
 
@@ -79,6 +80,7 @@ class PDA:
         if i < n and input_str[i] == 'a':
             self.stack.append('a')
             print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
+            print(f"Symbol popped from Stack: ε")
             print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
             i += 1
         else:
@@ -90,7 +92,7 @@ class PDA:
             expr += input_str[i]
             i += 1
 
-        if not is_valid_expression(expr):
+        if not is_valid_expression_352(expr):
             return False, f"Invalid arithmetic expression: {expr}"
 
         # Step 5: Next 'a'
@@ -135,7 +137,7 @@ def main():
         print(f"n = {n}")
         for idx in range(1, n + 1):
             user_input = input(f"\nEnter string {idx} of {n}: ").strip()
-            accepted, reason = pda.process(user_input)
+            accepted, reason = pda.process_352(user_input)
             if accepted:
                 print(f'\nString w = "{user_input}" is ACCEPTABLE by the given PDA.')
             else:
