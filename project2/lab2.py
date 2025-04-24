@@ -1,96 +1,114 @@
-# Project 2 for CS 341
-# Section number: 002
-# Semester: SPRING 2025
-# Written by: Maria Angel Palacios Sarmiento, mp352
-# Instructor: Arashdeep Kaur, ak3257@njit.edu
+def is_operator(ch):
+    return ch in ['+', '-', '*', '/']
 
-import re
+def is_digit(ch):
+    return ch.isdigit()
 
-terminal_symbols = set("0123456789.+-*/()ab")
+def is_valid_expression(expr):
+    # Simple validation: ensure expression consists of digits, operators, and parentheses
+    allowed = set('0123456789+-*/(). ')
+    return all(c in allowed for c in expr)
 
-# PDA class with transitions and processing
-class PDA_mp352:
+class PDA:
     def __init__(self):
         self.stack = []
         self.state = 'q0'
-        self.accept_state = 'q_accept'
+        self.accepting_state = 'q_accept'
 
     def reset(self):
         self.stack = ['Zo']
         self.state = 'q0'
+        print("PDA reset. Stack and state initialized.\nStart state: q0")
 
-    # Is valid symbol (only checks if all symbols are in the terminal set)
-    def is_valid_symbol(self, string):
-        return all(char in terminal_symbols for char in string)
-
-    def run(self, input_s):
+    def process(self, input_str):
+        print(f"\nInput string: {input_str}")
         self.reset()
-        print(f"Start state: {self.state}")
-        index = 0
-        error_occurred = False
 
-        # goes through each char in input
-        while index < len(input_s):
-            current_char = input_s[index]
-            stack_top = self.stack[-1] if self.stack else "epsilon"
+        i = 0
+        n = len(input_str)
+        k_count = 0  # Count of b's in first ab^k
 
-            print(f"\nPresent State: {self.state}")
-            print(f"Current input symbol under R-head: {current_char}")
-            print(f"Stack Top: {stack_top}")
-
-            # Handle 'a^k'
-            if self.state == 'q0' and current_char == 'a':
-                self.stack.append('a')
-                print("Symbol popped from Stack: Epsilon")
-                print("Symbols pushed onto Stack: a")
-                self.state = 'q0'
-                print("Next state: q0")
-
-            # Transition into middle expression (b section)
-            elif self.state == 'q0' and current_char == 'b':
-                if self.stack[-1] == 'a':
-                    self.stack.pop()
-                    print("Symbol popped from Stack: a")
-                    print("Symbols pushed onto Stack: b")
-                    self.stack.append('b')
-                    self.state = 'q1'
-                    print("Next state: q1")
-                else:
-                    error_occurred = True
-                    print(f"No valid transition from state {self.state} on input '{current_char}'")
-
-            # Process the arithmetic section (state q1)
-            elif self.state == 'q1' and current_char in "0123456789.+-*/()":
-                print(f"Processing arithmetic section: {current_char}")
-                self.state = 'q1'  # Stay in q1 as we're processing the middle part
-                print("Next state: q1")
-                
-            # Transition to final state after arithmetic processing
-            elif self.state == 'q1' and current_char == 'a':
-                if self.stack[-1] == 'b':
-                    self.stack.pop()
-                    print("Symbol popped from Stack: b")
-                    print("Symbols pushed onto Stack: a")
-                    self.stack.append('a')
-                    self.state = 'q2'
-                    print("Next state: q2")
-                else:
-                    error_occurred = True
-                    print(f"No valid transition from state {self.state} on input '{current_char}'")
-
-            # Reject if no valid transition is found
-            else:
-                error_occurred = True
-                print(f"No valid transition from state {self.state} on input '{current_char}'")
-
-            index += 1
-
-        # Final check for accepting state
-        if not error_occurred and self.state == 'q2' and not self.stack:
-            print(f"\nString w = \"{input_s}\" is accepted by the given PDA.")
+        # Step 1: Read a
+        if i < n and input_str[i] == 'a':
+            self.stack.append('a')
+            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
+            print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
+            i += 1
         else:
-            print(f"\nString w = \"{input_s}\" is not acceptable by the given PDA.")
-            return False
+            print("First symbol is not 'a'. Rejecting.")
+            return False, "Does not start with 'a'"
+
+        # Step 2: Read b's (ab^k)
+        while i < n and input_str[i] == 'b':
+            self.stack.append('b')
+            k_count += 1
+            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
+            print(f"Stack Top: {self.stack[-2]}\nSymbol pushed onto Stack: b\nNext state: q0")
+            i += 1
+
+        # Step 3: Read the next 'a' (completing ab^k a)
+        if i < n and input_str[i] == 'a':
+            self.stack.append('a')
+            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
+            print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
+            i += 1
+
+            # Special acceptance case for "ab^k a"
+            if i == n:
+                self.state = self.accepting_state
+                print(f"\nFinal state reached: {self.state}")
+                return True, ""
+
+        elif k_count == 0 and i == 1 and input_str == "aa":
+            # Special case for "aa"
+            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
+            if self.stack[-1] == 'a':
+                self.stack.pop()
+                self.state = 'q_accept'
+                print(f"Symbol popped from Stack: a\nNext state: {self.state}")
+                return True, ""
+            else:
+                return False, "Expected 'a' on top of stack for 'aa' case"
+        else:
+            return False, "Missing second 'a' after ab^k"
+
+        # Step 4: Read arithmetic expression until next 'a'
+        expr = ''
+        while i < n and input_str[i] != 'a':
+            expr += input_str[i]
+            i += 1
+
+        if not is_valid_expression(expr):
+            return False, f"Invalid arithmetic expression: {expr}"
+
+        # Step 5: Read final a
+        if i < n and input_str[i] == 'a':
+            i += 1
+        else:
+            return False, "Missing final 'a' before last b's"
+
+        # Step 6: Read b^k again
+        remaining_b = 0
+        while i < n and input_str[i] == 'b':
+            remaining_b += 1
+            i += 1
+
+        # Step 7: Final 'a'
+        if i < n and input_str[i] == 'a':
+            i += 1
+        else:
+            return False, "Final 'a' missing at the end"
+
+        # Step 8: Check if input fully consumed
+        if i != len(input_str):
+            return False, "Extra characters found after expected pattern"
+
+        if remaining_b != k_count:
+            return False, f"Mismatch in b counts: expected {k_count}, got {remaining_b}"
+
+        self.state = self.accepting_state
+        print(f"\nFinal state reached: {self.state}")
+        return True, ""
 
 def main():
     print("Project 2 for CS 341")
@@ -99,26 +117,21 @@ def main():
     print("Written by: Maria Angel Palacios Sarmiento, mp352")
     print("Instructor: Arashdeep Kaur, ak3257@njit.edu\n")
 
-    pda = PDA_mp352()
-
+    pda = PDA()
     try:
         n = int(input("Enter number of input strings to process (n >= 0): "))
         print(f"n = {n}")
-    except ValueError:
-        print("Invalid input for n. Must be an integer.")
-        return
-
-    if n == 0:
-        return
-
-    # Loop to process each input string
-    for i in range(1, n + 1):
-        input_s = input(f"\nEnter string {i} of {n}: ")
-        if not pda.is_valid_symbol(input_s):
-            print("Entered string contains invalid input bits.")
-        else:
-            print(f"Input string: {input_s}")
-            pda.run(input_s)
+        for idx in range(1, n + 1):
+            user_input = input(f"\nEnter string {idx} of {n}: ").strip()
+            accepted, reason = pda.process(user_input)
+            if accepted:
+                print(f'\nString w = "{user_input}" is ACCEPTABLE by the given PDA.')
+            else:
+                print(f'\nString w = "{user_input}" is NOT acceptable by the given PDA because: \n{reason}')
+    except KeyboardInterrupt:
+        print("\nInterrupted by user.")
+    except Exception as e:
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
