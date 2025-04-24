@@ -5,9 +5,25 @@ def is_digit(ch):
     return ch.isdigit()
 
 def is_valid_expression(expr):
-    # Simple validation: ensure expression consists of digits, operators, and parentheses
     allowed = set('0123456789+-*/(). ')
-    return all(c in allowed for c in expr)
+    
+    # Check if only allowed characters are present
+    if not all(c in allowed for c in expr):
+        return False
+
+    # Check for consecutive operators or invalid placement of operators
+    prev_char = ''
+    for char in expr:
+        if char in ['+', '-', '*', '/']:
+            if prev_char in ['+', '-', '*', '/'] or prev_char == '':
+                return False  # Consecutive operators or operator at the start
+        prev_char = char
+
+    # Check if the expression starts or ends with an operator
+    if expr[0] in ['+', '-', '*', '/'] or expr[-1] in ['+', '-', '*', '/']:
+        return False
+    
+    return True
 
 class PDA:
     def __init__(self):
@@ -28,17 +44,16 @@ class PDA:
         n = len(input_str)
         k_count = 0  # Count of b's in first ab^k
 
-        # Step 1: Read a
+        # Step 1: Read first 'a'
         if i < n and input_str[i] == 'a':
             self.stack.append('a')
             print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
             print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
             i += 1
         else:
-            print("First symbol is not 'a'. Rejecting.")
             return False, "Does not start with 'a'"
 
-        # Step 2: Read b's (ab^k)
+        # Step 2: Read b's (optional, can be k=0)
         while i < n and input_str[i] == 'b':
             self.stack.append('b')
             k_count += 1
@@ -46,33 +61,16 @@ class PDA:
             print(f"Stack Top: {self.stack[-2]}\nSymbol pushed onto Stack: b\nNext state: q0")
             i += 1
 
-        # Step 3: Read the next 'a' (completing ab^k a)
+        # Step 3: Second 'a'
         if i < n and input_str[i] == 'a':
             self.stack.append('a')
             print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
             print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
             i += 1
-
-            # Special acceptance case for "ab^k a"
-            if i == n:
-                self.state = self.accepting_state
-                print(f"\nFinal state reached: {self.state}")
-                return True, ""
-
-        elif k_count == 0 and i == 1 and input_str == "aa":
-            # Special case for "aa"
-            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
-            if self.stack[-1] == 'a':
-                self.stack.pop()
-                self.state = 'q_accept'
-                print(f"Symbol popped from Stack: a\nNext state: {self.state}")
-                return True, ""
-            else:
-                return False, "Expected 'a' on top of stack for 'aa' case"
         else:
             return False, "Missing second 'a' after ab^k"
 
-        # Step 4: Read arithmetic expression until next 'a'
+        # Step 4: Expression
         expr = ''
         while i < n and input_str[i] != 'a':
             expr += input_str[i]
@@ -81,17 +79,20 @@ class PDA:
         if not is_valid_expression(expr):
             return False, f"Invalid arithmetic expression: {expr}"
 
-        # Step 5: Read final a
+        # Step 5: Next 'a'
         if i < n and input_str[i] == 'a':
             i += 1
         else:
             return False, "Missing final 'a' before last b's"
 
-        # Step 6: Read b^k again
+        # Step 6: b^k again
         remaining_b = 0
         while i < n and input_str[i] == 'b':
             remaining_b += 1
             i += 1
+
+        if remaining_b != k_count:
+            return False, f"Mismatch in b counts: expected {k_count}, got {remaining_b}"
 
         # Step 7: Final 'a'
         if i < n and input_str[i] == 'a':
@@ -99,12 +100,9 @@ class PDA:
         else:
             return False, "Final 'a' missing at the end"
 
-        # Step 8: Check if input fully consumed
+        # Step 8: Done?
         if i != len(input_str):
             return False, "Extra characters found after expected pattern"
-
-        if remaining_b != k_count:
-            return False, f"Mismatch in b counts: expected {k_count}, got {remaining_b}"
 
         self.state = self.accepting_state
         print(f"\nFinal state reached: {self.state}")
