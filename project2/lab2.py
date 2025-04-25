@@ -1,7 +1,7 @@
 import re
 
 def is_operator_352(ch):
-    return ch in ['+', '-', '*', '/']
+    return ch in ['+', '-', '*', '/', '()']
 
 def is_digit_352(ch):
     return ch.isdigit()
@@ -22,10 +22,10 @@ def is_valid_expression_352(expr):
         prev_char = char
 
     # Check if the expression starts or ends with an operator
-    if expr[0] in ['+', '-', '*', '/'] or expr[-1] in ['+', '-', '*', '/']:
+    if expr[0] in ['+', '-', '*', '/','()'] or expr[-1] in ['+', '-', '*', '/','()']:
         return False
 
-    # Special case: negative sign before dot is invalid (e.g., '-.' is not allowed)
+    # Special case: negative sign before dot is invalid
     if '.-' in expr:
         return False
 
