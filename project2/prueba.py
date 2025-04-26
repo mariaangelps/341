@@ -26,12 +26,21 @@ def is_valid_expression_352(expr):
     if stack:
         return False
 
-    # This regular expression matches valid arithmetic expressions
-    # like (1+2.5)/3, .25, 3., etc.
+    # ❗ Custom regex checks for invalid cases with parentheses
+    # If there's a '(' not followed by +, -, or *
+    if re.search(r'\((?![+\-*])', expr):
+        return False
+
+    # If there's a ')' not preceded by +, -, or *
+    if re.search(r'(?<![+\-*])\)', expr):
+        return False
+
+    # Now check if it’s a valid expression using full match
     float_or_op = r'(\d+(\.\d*)?|\.\d+|\+|\-|\*|\/|\(|\))'
     valid_expr_pattern = f'^({float_or_op})+$'
 
     return re.match(valid_expr_pattern, expr) is not None
+
 
 
 class PDA:
