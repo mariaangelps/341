@@ -1,22 +1,16 @@
-
-import re
 import re
 
 def is_valid_expression_352(expr):
     allowed = set('0123456789+-*/().')
 
-    # Check if only allowed characters are present
     if not all(c in allowed for c in expr):
         return False
 
-    # Check for invalid operator placement (no operator at start or end)
     if expr[0] in '+*/' or expr[-1] in '+-*/':
         return False
 
-    # Remove spaces
     expr = expr.replace(" ", "")
 
-    # Check for balanced parentheses
     stack = []
     for char in expr:
         if char == '(':
@@ -28,25 +22,19 @@ def is_valid_expression_352(expr):
     if stack:
         return False
 
-    # ❌ Reject empty parentheses like () or ( )
     if re.search(r'\(\s*\)', expr):
         return False
 
-    # ❌ Reject if before ( is not operator or ( or start
     if re.search(r'(?<!^)(?<![\+\-\*/\(])\(', expr):
         return False
 
-    # ❌ Reject if after ) is not operator or ) or end
     if re.search(r'\)(?![\+\-\*/\)]|$)', expr):
         return False
 
-    # ✅ Check valid tokens
     float_or_op = r'(\d+(\.\d*)?|\.\d+|\+|\-|\*|\/|\(|\))'
     valid_expr_pattern = f'^({float_or_op})+$'
 
     return re.match(valid_expr_pattern, expr) is not None
-
-
 
 
 class PDA:
@@ -66,67 +54,100 @@ class PDA:
 
         i = 0
         n = len(input_str)
-        k_count = 0  # Count of b's in first ab^k
+        k_count = 0
 
-        # Step 1: Read first 'a'
         if i < n and input_str[i] == 'a':
             self.stack.append('a')
-            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
-            print(f"Stack Top: {self.stack[-2] if len(self.stack) > 1 else 'ε'}\nSymbols pushed onto Stack: a\nNext state: q0")
+            print(f"\nPresent State: {self.state}")
+            print(f"Current input symbol under R-head: {input_str[i]}")
+            print(f"Stack Top: {self.stack[-2]}\nSymbols pushed onto Stack: a\nNext state: q0")
             i += 1
         else:
             return False, "Does not start with 'a'"
 
-        # Step 2: Read b's (optional, can be k=0)
         while i < n and input_str[i] == 'b':
             self.stack.append('b')
             k_count += 1
-            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
-            print(f"Symbol popped from Stack: {self.stack.pop() if self.stack else 'ε'}")
-            print(f"Stack Top: {self.stack[-2] if len(self.stack) > 1 else 'ε'}\nSymbol pushed onto Stack: b\nNext state: q0")
+            print(f"\nPresent State: {self.state}")
+            print(f"Current input symbol under R-head: {input_str[i]}")
+            print(f"Symbol popped from Stack: {self.stack.pop()}")
+            print(f"Stack Top: {self.stack[-1] if len(self.stack) > 0 else 'ε'}")
+            self.stack.append('b')
+            print(f"Symbol pushed onto Stack: b\nNext state: q0")
             i += 1
 
-        # Step 3: Second 'a'
         if i < n and input_str[i] == 'a':
             self.stack.append('a')
-            print(f"\nPresent State: {self.state}\nCurrent input symbol under R-head: {input_str[i]}")
-            print(f"Symbol popped from Stack: {self.stack.pop() if self.stack else 'ε'}")
-            print(f"Stack Top: {self.stack[-2] if len(self.stack) > 1 else 'ε'}\nSymbols pushed onto Stack: a\nNext state: q0")
+            print(f"\nPresent State: {self.state}")
+            print(f"Current input symbol under R-head: {input_str[i]}")
+            print(f"Symbol popped from Stack: {self.stack.pop()}")
+            print(f"Stack Top: {self.stack[-1] if len(self.stack) > 0 else 'ε'}\nSymbols pushed onto Stack: a\nNext state: q0")
             i += 1
         else:
             return False, "Missing second 'a' after ab^k"
 
-        # Step 4: Expression
+        # Step 4: Arithmetic Expression Parsing
         expr = ''
-        while i < n and not (input_str[i] == 'a' and i + k_count + 1 < n and input_str[i + k_count + 1] == 'a'):
-            expr += input_str[i]
+        self.state = 'q1'
+        while i < n and input_str[i] != 'a':
+            symbol = input_str[i]
+            expr += symbol
+            top = self.stack[-1] if self.stack else 'ε'
+
+            print(f"\nPresent State: {self.state}")
+            print(f"Current input symbol under R-head: {symbol}")
+            print(f"Stack Top: {top}")
+
+            if symbol == '(':
+                self.stack.append('(')
+                print("Symbols pushed onto Stack: (")
+            elif symbol == ')':
+                if self.stack and self.stack[-1] == '(':
+                    self.stack.pop()
+                    print("Symbol popped from Stack: (")
+                else:
+                    return False, f"Unmatched ')' at position {i}"
+            else:
+                print(f"Symbols pushed onto Stack: {symbol} ")
+
+            print(f"Next state: {self.state}")
             i += 1
 
         if not is_valid_expression_352(expr):
             return False, f"Invalid arithmetic expression: {expr}"
 
-        # Step 5: Next 'a'
+        self.state = 'q2'
         if i < n and input_str[i] == 'a':
+            print(f"\nPresent State: {self.state}")
+            print(f"Current input symbol under R-head: {input_str[i]}")
+            print(f"Stack Top: {self.stack[-1] if self.stack else 'ε'}")
+            print("Symbols pushed onto Stack: a\nNext state: q2")
             i += 1
         else:
             return False, "Missing final 'a' before last b's"
 
-        # Step 6: b^k again
+        self.state = 'q3'
         remaining_b = 0
         while i < n and input_str[i] == 'b':
             remaining_b += 1
+            print(f"\nPresent State: {self.state}")
+            print(f"Current input symbol under R-head: {input_str[i]}")
+            print(f"Stack Top: {self.stack[-1] if self.stack else 'ε'}")
+            print("Symbol pushed onto Stack: b\nNext state: q3")
             i += 1
 
         if remaining_b != k_count:
             return False, f"Mismatch in b counts: expected {k_count}, got {remaining_b}"
 
-        # Step 7: Final 'a'
         if i < n and input_str[i] == 'a':
+            print(f"\nPresent State: {self.state}")
+            print(f"Current input symbol under R-head: {input_str[i]}")
+            print(f"Stack Top: {self.stack[-1] if self.stack else 'ε'}")
+            print("Symbol pushed onto Stack: a\nNext state: q_accept")
             i += 1
         else:
             return False, "Final 'a' missing at the end"
 
-        # Step 8: Done?
         if i != len(input_str):
             return False, "Extra characters found after expected pattern"
 
@@ -144,7 +165,6 @@ def main():
 
     pda = PDA()
     
-    # Process the predefined strings
     test_strings = [
         "abbba43.51386abbba",
         "aa.78+27.-3.013/837.842+aa",
@@ -168,6 +188,7 @@ def main():
             print(f'\nString w = "{user_input}" is ACCEPTABLE by the given PDA ✅.')
         else:
             print(f'\nString w = "{user_input}" is NOT acceptable by the given PDA because: \n{reason}')
+
 
 if __name__ == "__main__":
     main()
