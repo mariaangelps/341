@@ -1,5 +1,5 @@
-(base) macbookpro@MacBookriaAngel cs 341 % /usr/local/bin/python3 "/Users/macbo
-okpro/Desktop/CS/cs 341/341/project2/lab2.py"
+(base) macbookpro@MacBookriaAngel cs 341 % /usr/local/bin/python3 "/Users/macbookpro/Deskto
+p/CS/cs 341/341/project2/lab2.py"
 Project 2 for CS 341
 Section number: 002
 Semester: SPRING 2025
@@ -24,7 +24,7 @@ Next state: q1
 
 Present State: q1
 Current input symbol under R-head: b
-Stack Top: a
+Stack Top: b
 Symbol popped from Stack: ϵ
 Symbols pushed onto Stack: b
 Next state: q1
@@ -144,6 +144,8 @@ Next state: q_accept
 Final state reached: q_accept
 
 String w = "abbba43.51386abbba" is ACCEPTABLE by the given PDA ✅.
+Enter string 2 of 15: 
+
 Enter string 2 of 15: aa.78+27.-3.013/837.842+aa
 
 Input string: aa.78+27.-3.013/837.842+aa
@@ -319,6 +321,8 @@ Next state: q2
 
 String w = "aa.78+27.-3.013/837.842+aa" is NOT acceptable by the given PDA because:
 Invalid arithmetic expression: .78+27.-3.013/837.842+
+Enter string 3 of 15: 
+
 Enter string 3 of 15: aa48622.+.411.2/00.1/521.23-.9+.53/7.aa
 
 Input string: aa48622.+.411.2/00.1/521.23-.9+.53/7.aa
@@ -600,6 +604,9 @@ Next state: q_accept
 Final state reached: q_accept
 
 String w = "aa48622.+.411.2/00.1/521.23-.9+.53/7.aa" is ACCEPTABLE by the given PDA ✅.
+Enter string 4 of 15: 
+
+String w = "aa48622.+.411.2/00.1/521.23-.9+.53/7.aa" is ACCEPTABLE by the given PDA ✅.
 Enter string 4 of 15: abba382.8914.2aba
 
 Input string: abba382.8914.2aba
@@ -614,7 +621,7 @@ Next state: q1
 
 Present State: q1
 Current input symbol under R-head: b
-Stack Top: a
+Stack Top: b
 Symbol popped from Stack: ϵ
 Symbols pushed onto Stack: b
 Next state: q1
@@ -719,123 +726,4 @@ Next state: q3
 
 String w = "abba382.8914.2aba" is NOT acceptable by the given PDA because:
 Mismatch in b counts: expected 2, got 1
-Enter string 5 of 15: aba4.91-.17.9aba
-
-Input string: aba4.91-.17.9aba
-Start state: q0
-
-Present State: q0
-Current input symbol under R-head: a
-Stack Top: ϵ
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: a
-Next state: q1
-
-Present State: q1
-Current input symbol under R-head: b
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: b
-Next state: q1
-
-Present State: q1
-Current input symbol under R-head: a
-Stack Top: b
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: a
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: 4
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: .
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: 9
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: 1
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: -
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: .
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: 1
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: 7
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: .
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: 9
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q2
-
-Present State: q2
-Current input symbol under R-head: a
-Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
-Next state: q3
-
-Present State: q3
-Current input symbol under R-head: b
-Stack Top: a
-Symbol popped from Stack: b
-Symbols pushed onto Stack: ϵ
-Next state: q3
-
-Present State: q3
-Current input symbol under R-head: a
-Stack Top: a
-Symbol popped from Stack: a
-Symbols pushed onto Stack: ϵ
-Next state: q_accept
-
-Final state reached: q_accept
-
-String w = "aba4.91-.17.9aba" is ACCEPTABLE by the given PDA ✅.
+Enter string 5 of 15: 

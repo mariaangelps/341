@@ -1,3 +1,9 @@
+# Project 2 for CS 341
+# Section number: 002
+# Semester: SPRING 2025
+# Written by: Maria Angel Palacios Sarmiento, mp352
+# Instructor: Arashdeep Kaur, ak3257@njit.edu
+
 import re
 
 def is_valid_expression_352(expr):
@@ -108,7 +114,7 @@ class PDA:
                 else:
                     return False, f"Unmatched ')' at position {i}"
             else:
-                print(f"Symbols pushed onto Stack: {symbol} ")
+                print(f"Symbols pushed onto Stack: {symbol}")
 
             print(f"Next state: {self.state}")
             i += 1
@@ -165,24 +171,18 @@ def main():
 
     pda = PDA()
     
-    test_strings = [
-        "abbba43.51386abbba",
-        "aa.78+27.-3.013/837.842+aa",
-        "aa48622.+.41*1.2/00.1/521.23-.9+.53/7.aa",
-        "abba382.89*14.2aba",
-        "aba4.91-.*17.9aba aa44.88.6+3.208aa",
-        "aba(1.2+(3.5-.9)/19).3aba",
-        "abba(.4)64abba",
-        "aba((824.23+(9.22-00.0)*21.2))+((.2/7.))abba",
-        "aba(())aba",
-        "abba((14.252+(692.211*(.39+492.1))/49.235)abba",
-        "abba+6.5abba",
-        "aa26.0*(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.*8.0)/.33))+.76aa",
-        "abba.0*(32.922+.7-*9.))abba",
-        "aba(4.+(.8-9.))/2.)*3.4+(5.21/34.2ab"
-    ]
-    
-    for idx, user_input in enumerate(test_strings, 1):
+    # Prompting the user to enter the number of strings
+    n = int(input("Enter the number of input strings (n ≥ 0): "))
+    print(f"\nYou entered: {n} strings to process.\n")
+
+    if n == 0:
+        print("Program terminates.")
+        return
+
+    # Loop for processing n strings
+    for i in range(1, n + 1):
+        user_input = input(f"Enter string {i} of {n}: ")
+        
         accepted, reason = pda.process_352(user_input)
         if accepted:
             print(f'\nString w = "{user_input}" is ACCEPTABLE by the given PDA ✅.')

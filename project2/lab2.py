@@ -1,11 +1,7 @@
-# Project 2 for CS 341
-# Section number: 002
-# Semester: SPRING 2025
-# Written by: Maria Angel Palacios Sarmiento, mp352
-# Instructor: Arashdeep Kaur, ak3257@njit.edu
-
 import re
 
+# Función que valida una expresión aritmética
+import re
 def is_valid_expression_352(expr):
     allowed = set('0123456789+-*/().')
     expr = expr.replace(" ", "")
@@ -15,6 +11,7 @@ def is_valid_expression_352(expr):
 
     if expr[0] in '+*/' or expr[-1] in '+-*/':
         return False
+    expr = expr.replace(" ", "")
 
     stack = []
     for char in expr:
@@ -37,10 +34,14 @@ def is_valid_expression_352(expr):
     if re.search(r'\)(?![\+\-\*/\)]|$)', expr):
         return False
 
+    # Actualización aquí: Acepta sólo un punto decimal
     float_or_op = r'(\d+(\.\d*)?|\.\d+|\+|\-|\*|\/|\(|\))'
     valid_expr_pattern = f'^({float_or_op})+$'
 
+    # Aquí también se ajusta el patrón
     return re.match(valid_expr_pattern, expr) is not None
+
+
 
 class PDA:
     def __init__(self):
@@ -61,12 +62,13 @@ class PDA:
         n = len(input_str)
         k_count = 0
 
-        # First a
+        # Primer 'a'
         if i < n and input_str[i] == 'a':
+            self.stack.append('a')
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
-            print(f"Stack Top: {self.stack[-1]}")
-
+            print(f"Stack Top: {self.stack[-2]}")
+            
             self.stack.pop()
             print("Symbol popped from Stack: ϵ")
             self.stack.append('a')
@@ -80,9 +82,11 @@ class PDA:
 
         # b's
         while i < n and input_str[i] == 'b':
+            self.stack.append('b')
+            
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
-            print(f"Stack Top: {self.stack[-1]}")
+            print(f"Stack Top: {self.stack[-1] if len(self.stack) > 0 else 'ε'}")
 
             self.stack.pop()
             print("Symbol popped from Stack: ϵ")
@@ -93,7 +97,7 @@ class PDA:
             k_count += 1
             i += 1
 
-        # Second a
+        # Segundo 'a'
         if i < n and input_str[i] == 'a':
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
@@ -110,15 +114,14 @@ class PDA:
         else:
             return False, "Missing second 'a' after ab^k"
 
-        # Arithmetic expression
+        # Expresión aritmética
         expr = ''
         while i < n and input_str[i] != 'a':
             symbol = input_str[i]
             expr += symbol
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {symbol}")
-            print(f"Stack Top: {self.stack[-1]}")
-            print("Symbol popped from Stack: ϵ")
+            print(f"Stack Top: {self.stack[-1] if self.stack else 'ε'}")
 
             if symbol == '(':
                 self.stack.append('(')
@@ -130,16 +133,17 @@ class PDA:
                 else:
                     return False, f"Unmatched ')' at position {i}"
             else:
-                print(f"Symbols pushed onto Stack: ϵ")
+                print(f"Symbol popped from Stack: ϵ")
+                print("Symbols pushed onto Stack: ϵ")
 
             print(f"Next state: {self.state}")
             i += 1
 
-        # Validate the arithmetic expression
+        # Validar la expresión aritmética
         if not is_valid_expression_352(expr):
             return False, f"Invalid arithmetic expression: {expr}"
 
-        # Third a
+        # Tercer 'a'
         if i < n and input_str[i] == 'a':
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
@@ -175,7 +179,7 @@ class PDA:
         if remaining_b != k_count:
             return False, f"Mismatch in b counts: expected {k_count}, got {remaining_b}"
 
-        # Last a
+        # Último 'a'
         if i < n and input_str[i] == 'a':
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
@@ -191,7 +195,7 @@ class PDA:
         else:
             return False, "Missing final 'a' at the end"
 
-        if i != n:
+        if i != len(input_str):
             return False, "Extra characters found after expected pattern"
 
         print(f"\nFinal state reached: {self.state}")
