@@ -50,9 +50,10 @@ class PDA:
         self.accepting_state = 'q_accept'
 
     def reset_352(self):
-        self.stack = ['Zo']
+        self.stack = ['ϵ']
         self.state = 'q0'
-        print("PDA reset. Stack and state initialized.\nStart state: q0")
+       
+        print("Start state: q0")
 
     def process_352(self, input_str):
         print(f"\nInput string: {input_str}")
