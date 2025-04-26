@@ -1,3 +1,5 @@
+
+import re
 import re
 
 def is_valid_expression_352(expr):
@@ -8,13 +10,13 @@ def is_valid_expression_352(expr):
         return False
 
     # Check for invalid operator placement (no operator at start or end)
-    if expr[0] in '+-*/' or expr[-1] in '+-*/':
+    if expr[0] in '+*/' or expr[-1] in '+-*/':
         return False
 
-    # Remove spaces to check structure
+    # Remove spaces
     expr = expr.replace(" ", "")
 
-    # Simple parenthesis check
+    # Check for balanced parentheses
     stack = []
     for char in expr:
         if char == '(':
@@ -26,20 +28,24 @@ def is_valid_expression_352(expr):
     if stack:
         return False
 
-    # ❗ Custom regex checks for invalid cases with parentheses
-    # If there's a '(' not followed by +, -, or *
-    if re.search(r'\((?![+\-*])', expr):
+    # ❌ Reject empty parentheses like () or ( )
+    if re.search(r'\(\s*\)', expr):
         return False
 
-    # If there's a ')' not preceded by +, -, or *
-    if re.search(r'(?<![+\-*])\)', expr):
+    # ❌ Reject if before ( is not operator or ( or start
+    if re.search(r'(?<!^)(?<![\+\-\*/\(])\(', expr):
         return False
 
-    # Now check if it’s a valid expression using full match
+    # ❌ Reject if after ) is not operator or ) or end
+    if re.search(r'\)(?![\+\-\*/\)]|$)', expr):
+        return False
+
+    # ✅ Check valid tokens
     float_or_op = r'(\d+(\.\d*)?|\.\d+|\+|\-|\*|\/|\(|\))'
     valid_expr_pattern = f'^({float_or_op})+$'
 
     return re.match(valid_expr_pattern, expr) is not None
+
 
 
 

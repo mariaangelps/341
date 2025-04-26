@@ -1,3 +1,9 @@
+# Project 2 for CS 341
+# Section number: 002
+# Semester: SPRING 2025
+# Written by: Maria Angel Palacios Sarmiento, mp352
+# Instructor: Arashdeep Kaur, ak3257@njit.edu
+
 import re
 
 def is_operator_352(ch):
