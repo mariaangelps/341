@@ -8,7 +8,7 @@ def is_valid_expression_352(expr):
         return False
 
     # Check for invalid operator placement (no operator at start or end)
-    if expr[0] in '+*/' or expr[-1] in '+-*/':
+    if expr[0] in '+-*/' or expr[-1] in '+-*/':
         return False
 
     # Remove spaces to check structure
