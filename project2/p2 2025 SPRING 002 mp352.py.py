@@ -64,21 +64,33 @@ def is_valid_expression_352(expr):
 class PDA:
     def __init__(self):
         self.stack = []
-        self.state = 'q0'
+        self.state = 'q'
         self.accepting_state = 'q_accept'
 
     def reset_352(self):
         self.stack = ['ϵ']
+        self.state = 'q'
+        print("Start state: q")
+        print(f"\nPresent State: {self.state}")
+        print("Current input symbol under R-head: ε")
+        print("Stack Top: ϵ")
+        print("Symbol popped from Stack: ϵ")
+        print("Symbols pushed onto Stack: z0")
+        print("Next state: q0")
+        
+        # Now actually do the transition
+        self.stack.pop()
+        self.stack.append('z0')
         self.state = 'q0'
-       
-        print("Start state: q0")
+
     def process_352(self, input_str):
         print(f"\nInput string: {input_str}")
         self.reset_352()
-
+        
         i = 0
         n = len(input_str)
         k_count = 0
+
 
         if i < n and input_str[i] == 'a':
             top = self.stack[-1] if self.stack else 'ϵ'
