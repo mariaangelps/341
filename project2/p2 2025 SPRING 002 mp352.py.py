@@ -139,8 +139,8 @@ class PDA:
                 else:
                     return False, f"Unmatched ')' at position {i}"
             else:
-                print("Symbol popped from Stack: ε")
-                print(f"Symbols pushed onto Stack: {symbol}")
+                print("Symbol popped from Stack: ε pop")
+                print("Symbols pushed onto Stack: none ")
 
             print(f"Next state: {self.state}")
             i += 1
@@ -153,8 +153,8 @@ class PDA:
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
             print(f"Stack Top: {top}")
-            print("Symbol popped from Stack: ε")
-            #print("Symbols pushed onto Stack: a")
+            print("Symbol popped from Stack: ε pop")
+            print("Symbols pushed onto Stack: none ")
             print("Next state: q3")
             self.stack.append('a')
             self.state = 'q3'
@@ -168,8 +168,8 @@ class PDA:
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
             print(f"Stack Top: {top}")
-            print("Symbol popped from Stack: ε")
-            #print("Symbol pushed onto Stack: b")
+            print("Symbol popped from Stack: ε pop")
+            print("Symbols pushed onto Stack: none ")
             print("Next state: q3")
             self.stack.append('b')
             remaining_b += 1
@@ -183,8 +183,8 @@ class PDA:
             print(f"\nPresent State: {self.state}")
             print(f"Current input symbol under R-head: {input_str[i]}")
             print(f"Stack Top: {top}")
-            print("Symbol popped from Stack: ε")
-           # print("Symbols pushed onto Stack: a")
+            print("Symbol popped from Stack: ε pop")
+            print("Symbols pushed onto Stack: none ")
             print("Next state: q_accept")
             self.stack.append('a')
             self.state = self.accepting_state
