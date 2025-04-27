@@ -1,5 +1,6 @@
-(base) macbookpro@MacBookriaAngel cs 341 % /usr/local/bin/python3 "/Users/macbookpro/Deskto
-p/CS/cs 341/341/project2/lab2.py"
+(base) macbookpro@MacBookriaAngel cs 341 % /usr/local
+/bin/python3 "/Users/macbookpro/Desktop/CS/cs 341/341
+/project2/final.py"
 Project 2 for CS 341
 Section number: 002
 Semester: SPRING 2025
@@ -18,133 +19,126 @@ Start state: q0
 Present State: q0
 Current input symbol under R-head: a
 Stack Top: ϵ
-Symbol popped from Stack: ϵ
 Symbols pushed onto Stack: a
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: b
-Stack Top: b
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: b
 Stack Top: b
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: b
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: b
 Stack Top: b
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: b
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: a
 Stack Top: b
-Symbol popped from Stack: ϵ
+Symbol popped from Stack: ε
 Symbols pushed onto Stack: a
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 4
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 5
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 1
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 8
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 6
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: a
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
 Next state: q3
 
 Present State: q3
 Current input symbol under R-head: b
 Stack Top: a
-Symbol popped from Stack: b
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
 Next state: q3
 
 Present State: q3
 Current input symbol under R-head: b
-Stack Top: a
-Symbol popped from Stack: b
-Symbols pushed onto Stack: ϵ
+Stack Top: b
+Symbol popped from Stack: ε
 Next state: q3
 
 Present State: q3
 Current input symbol under R-head: b
-Stack Top: a
-Symbol popped from Stack: b
-Symbols pushed onto Stack: ϵ
+Stack Top: b
+Symbol popped from Stack: ε
 Next state: q3
 
 Present State: q3
 Current input symbol under R-head: a
-Stack Top: a
-Symbol popped from Stack: a
-Symbols pushed onto Stack: ϵ
+Stack Top: b
+Symbol popped from Stack: ε
 Next state: q_accept
 
 Final state reached: q_accept
 
 String w = "abbba43.51386abbba" is ACCEPTABLE by the given PDA ✅.
-Enter string 2 of 15: 
 
 Enter string 2 of 15: aa.78+27.-3.013/837.842+aa
 
@@ -154,576 +148,2521 @@ Start state: q0
 Present State: q0
 Current input symbol under R-head: a
 Stack Top: ϵ
-Symbol popped from Stack: ϵ
 Symbols pushed onto Stack: a
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: a
 Stack Top: a
-Symbol popped from Stack: ϵ
+Symbol popped from Stack: ε
 Symbols pushed onto Stack: a
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 7
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 8
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: +
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 7
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: -
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 0
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 1
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: /
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 8
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 7
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 8
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 4
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: +
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
 Next state: q2
 
 String w = "aa.78+27.-3.013/837.842+aa" is NOT acceptable by the given PDA because:
-Invalid arithmetic expression: .78+27.-3.013/837.842+
-Enter string 3 of 15: 
+Entered string contains invalid input bits: .78+27.-3.013/837.842+
 
-Enter string 3 of 15: aa48622.+.411.2/00.1/521.23-.9+.53/7.aa
+Enter string 3 of 15: aa48622.+.41*1.2/00.1/521.23-.9+.53/7.aa
 
-Input string: aa48622.+.411.2/00.1/521.23-.9+.53/7.aa
+Input string: aa48622.+.41*1.2/00.1/521.23-.9+.53/7.aa
 Start state: q0
 
 Present State: q0
 Current input symbol under R-head: a
 Stack Top: ϵ
-Symbol popped from Stack: ϵ
 Symbols pushed onto Stack: a
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: a
 Stack Top: a
-Symbol popped from Stack: ϵ
+Symbol popped from Stack: ε
 Symbols pushed onto Stack: a
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 4
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 8
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 6
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: +
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 4
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 1
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 1
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: /
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 0
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 0
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 1
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: /
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 5
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 1
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: -
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 9
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: +
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 5
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: /
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 7
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: a
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
 Next state: q3
 
 Present State: q3
 Current input symbol under R-head: a
 Stack Top: a
-Symbol popped from Stack: a
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
 Next state: q_accept
 
 Final state reached: q_accept
 
-String w = "aa48622.+.411.2/00.1/521.23-.9+.53/7.aa" is ACCEPTABLE by the given PDA ✅.
-Enter string 4 of 15: 
+String w = "aa48622.+.41*1.2/00.1/521.23-.9+.53/7.aa" is ACCEPTABLE by the given PDA ✅.
 
-String w = "aa48622.+.411.2/00.1/521.23-.9+.53/7.aa" is ACCEPTABLE by the given PDA ✅.
-Enter string 4 of 15: abba382.8914.2aba
+Enter string 4 of 15: abba382.89*14.2aba
 
-Input string: abba382.8914.2aba
+Input string: abba382.89*14.2aba
 Start state: q0
 
 Present State: q0
 Current input symbol under R-head: a
 Stack Top: ϵ
-Symbol popped from Stack: ϵ
 Symbols pushed onto Stack: a
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: b
-Stack Top: b
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: b
 Stack Top: b
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: b
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
 Next state: q1
 
 Present State: q1
 Current input symbol under R-head: a
 Stack Top: b
-Symbol popped from Stack: ϵ
+Symbol popped from Stack: ε
 Symbols pushed onto Stack: a
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 3
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 8
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 8
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 9
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 1
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 4
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: .
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: 2
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
 Next state: q2
 
 Present State: q2
 Current input symbol under R-head: a
 Stack Top: a
-Symbol popped from Stack: ϵ
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
 Next state: q3
 
 Present State: q3
 Current input symbol under R-head: b
 Stack Top: a
-Symbol popped from Stack: b
-Symbols pushed onto Stack: ϵ
+Symbol popped from Stack: ε
 Next state: q3
 
-String w = "abba382.8914.2aba" is NOT acceptable by the given PDA because:
+String w = "abba382.89*14.2aba" is NOT acceptable by the given PDA because:
 Mismatch in b counts: expected 2, got 1
-Enter string 5 of 15: 
+
+Enter string 5 of 15: aba4.91-.*17.9aba
+
+Input string: aba4.91-.*17.9aba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: -
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 7
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+String w = "aba4.91-.*17.9aba" is NOT acceptable by the given PDA because:
+Entered string contains invalid input bits 4.91-.*17.9
+Enter string 6 of 15: 
+
+Enter string 6 of 15: aa44.88.6+3.208aa
+
+Input string: aa44.88.6+3.208aa
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 6
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 0
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+String w = "aa44.88.6+3.208aa" is NOT acceptable by the given PDA because:
+Entered string contains invalid input bits 44.88.6+3.208
+Enter string 7 of 15: 
+
+Enter string 7 of 15: aba(1.2+(3.5-.9)/19).3aba
+
+Input string: aba(1.2+(3.5-.9)/19).3aba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 5
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: -
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+String w = "aba(1.2+(3.5-.9)/19).3aba" is NOT acceptable by the given PDA because:
+Entered string contains invalid input bits: (1.2+(3.5-.9)/19).3
+Enter string 8 of 15: 
+
+Enter string 8 of 15: abba(.4)64abba
+
+Input string: abba(.4)64abba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: b
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 6
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+String w = "abba(.4)64abba" is NOT acceptable by the given PDA because:
+Entered string contains invalid input bits: (.4)64
+Enter string 9 of 15: 
+
+Enter string 9 of 15: aba((824.23+(9.22-00.0)*21.2))+((.2/7.))abba
+
+Input string: aba((824.23+(9.22-00.0)*21.2))+((.2/7.))abba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: -
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 0
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 0
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 0
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 7
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: a
+Stack Top: a
+Symbol popped from Stack: ε
+Next state: q3
+
+Present State: q3
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Next state: q3
+
+Present State: q3
+Current input symbol under R-head: b
+Stack Top: b
+Symbol popped from Stack: ε
+Next state: q3
+
+String w = "aba((824.23+(9.22-00.0)*21.2))+((.2/7.))abba" is NOT acceptable by the given PDA because:
+Mismatch in b counts: expected 1, got 2
+Enter string 10 of 15: 
+
+Enter string 10 of 15: aba(())aba
+
+Input string: aba(())aba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+String w = "aba(())aba" is NOT acceptable by the given PDA because:
+Entered string contains invalid input bits: (())
+Enter string 11 of 15: 
+
+Enter string 11 of 15: abba((14.252+(692.211*(.39+492.1))/49.235)abba
+
+Input string: abba((14.252+(692.211*(.39+492.1))/49.235)abba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: b
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 5
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 6
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 5
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+String w = "abba((14.252+(692.211*(.39+492.1))/49.235)abba" is NOT acceptable by the given PDA because:
+Entered string contains invalid input bits: ((14.252+(692.211*(.39+492.1))/49.235)
+Enter string 12 of 15: 
+
+Enter string 12 of 15: abba+6.5abba
+
+Input string: abba+6.5abba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: b
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 6
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 5
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
+Next state: q2
+
+String w = "abba+6.5abba" is NOT acceptable by the given PDA because:
+Entered string contains invalid input bits: +6.5
+Enter string 13 of 15: 
+
+Enter string 13 of 15: aa26.0*(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.*8.0)/.33))+.76aa
+
+Input string: aa26.0*(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.*8.0)/.33))+.76aa
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 6
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 0
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 7
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 1
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 1
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: -
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 6
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: -
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 5
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 5
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 7
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 0
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 7
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 6
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 6
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: a
+Stack Top: a
+Symbol popped from Stack: ε
+Next state: q3
+
+Present State: q3
+Current input symbol under R-head: a
+Stack Top: a
+Symbol popped from Stack: ε
+Next state: q_accept
+
+Final state reached: q_accept
+
+String w = "aa26.0*(.87/((4.+.2)/(23.1)-2.9)+6.)/(((823.*.333-57.*8.0)/.33))+.76aa" is ACCEPTABLE by the given PDA ✅.
+Enter string 14 of 15: 
+
+Enter string 14 of 15: abba.0*(32.922+.7-*9.))abba
+
+Input string: abba.0*(32.922+.7-*9.))abba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: b
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 0
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 0
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 3
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 3
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 7
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 7
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: -
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: *
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: *
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: a
+
+String w = "abba.0*(32.922+.7-*9.))abba" is NOT acceptable by the given PDA because:
+Unmatched ')' at position 22
+Enter string 15 of 15: 
+
+Enter string 15 of 15: aba(4.+(.8-9.))/2.)*3.4+(5.21/34.2aba
+
+Input string: aba(4.+(.8-9.))/2.)*3.4+(5.21/34.2aba
+Start state: q0
+
+Present State: q0
+Current input symbol under R-head: a
+Stack Top: ϵ
+Symbols pushed onto Stack: a
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: b
+Stack Top: a
+Symbol popped from Stack: ε
+Symbol pushed onto Stack: b
+Next state: q1
+
+Present State: q1
+Current input symbol under R-head: a
+Stack Top: b
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: a
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: a
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 4
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 4
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: +
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: +
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: (
+Stack Top: (
+Symbols pushed onto Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 8
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 8
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: -
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: -
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 9
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 9
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: (
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: (
+Symbol popped from Stack: (
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: /
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: /
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: 2
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: 2
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: .
+Stack Top: a
+Symbol popped from Stack: ε
+Symbols pushed onto Stack: .
+Next state: q2
+
+Present State: q2
+Current input symbol under R-head: )
+Stack Top: a
+
+String w = "aba(4.+(.8-9.))/2.)*3.4+(5.21/34.2aba" is NOT acceptable by the given PDA because:
+Unmatched ')' at position 18
+(base) macbookpro@MacBookriaAngel cs 341 % 
